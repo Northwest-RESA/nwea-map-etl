@@ -37,8 +37,11 @@ def main(request):
 
     storage_client = storage.Client()
     bucket = storage_client.bucket(gcs_bucket)
+
+    remote_path = blob = 'assessment/nwea_map/active/'
+
     for csv_path in glob.glob('/tmp/*.csv'):
-        blob = bucket.blob(os.path.basename(csv_path))
+        blob = bucket.blob(remote_path + os.path.basename(csv_path))
         blob.upload_from_filename(csv_path)
 
     return f'Uploaded CSV files to GCS'
