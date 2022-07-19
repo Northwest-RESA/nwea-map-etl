@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "nwea-map-etl"
+version = "0.1.0"
+description = ""
+authors = ["Bucky <buckybush@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+google-cloud-secret-manager = "^2.12.0"
+google-cloud-storage = "^2.4.0"
+requests = "^2.28.1"
+functions-framework = "^3.1.0"
+pandas = "^1.4.3"
+psutil = "^5.9.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

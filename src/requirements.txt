@@ -1,3 +1,5 @@
 google-cloud-secret-manager
 google-cloud-storage
 requests
+pandas
+psutil
